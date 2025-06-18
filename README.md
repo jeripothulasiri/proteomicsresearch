@@ -1,46 +1,5 @@
 # 🧬 **Enhancing Proteomics Research through ML Algorithms and Blockchain Security**
 
-# Project Structure
-proteomics-ml-blockchain/
-│
-├── dataset/                  # Raw and cleaned protein sequence files
-│   └── proteins.csv
-│
-├── ml_model/                 # Machine Learning training and prediction scripts
-│   ├── model_train.py
-│   ├── predict.py
-│   └── tfidf_vectorizer.pkl
-│
-├── blockchain/               # Smart contract code using Truffle
-│   ├── contracts/
-│   │   └── PredictionStorage.sol
-│   ├── migrations/
-│   ├── test/
-│   └── truffle-config.js
-│
-├── flask_app/                # Flask backend and routes
-│   ├── app.py
-│   ├── routes.py
-│   ├── config.py
-│   └── blockchain_interface.py
-│
-├── static/                   # CSS, JS, images
-│
-├── templates/                # HTML templates (Flask frontend)
-│   ├── index.html
-│   ├── login.html
-│   ├── admin_dashboard.html
-│   └── result.html
-│
-├── screenshots/              # Project screenshots for README
-│
-├── database/                 # SQL scripts or DB connections
-│   └── schema.sql
-│
-├── requirements.txt          # Python dependencies
-├── README.md                 # Project documentation
-└── LICENSE                   # License file (MIT)
-
 ## 📘 **Project Overview**
 
 **Proteomics** is the study of protein structures and functions. It plays a critical role in medical and biological research. However, proteomics data is often **complex, high-volume, and sensitive**, making it difficult to process and secure using traditional methods.
