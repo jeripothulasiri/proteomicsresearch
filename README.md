@@ -1,103 +1,164 @@
-🧬 Enhancing Proteomics Research through ML Algorithms and Blockchain Security
-📘 Project Overview
-Proteomics, the study of protein structures and functions, is a crucial domain in bioinformatics and medical research. However, proteomics data is massive, complex, and sensitive, making it difficult to manage, analyze, and secure using traditional systems.
+# 🧬 **Enhancing Proteomics Research through ML Algorithms and Blockchain Security**
 
-This project addresses these challenges by integrating Machine Learning (ML) algorithms for protein classification and prediction with Blockchain for tamper-proof data security. A user-friendly Flask web interface allows researchers to upload data, run analyses, and view secure results — all in one platform.
+# Project Structure
+proteomics-ml-blockchain/
+│
+├── dataset/                  # Raw and cleaned protein sequence files
+│   └── proteins.csv
+│
+├── ml_model/                 # Machine Learning training and prediction scripts
+│   ├── model_train.py
+│   ├── predict.py
+│   └── tfidf_vectorizer.pkl
+│
+├── blockchain/               # Smart contract code using Truffle
+│   ├── contracts/
+│   │   └── PredictionStorage.sol
+│   ├── migrations/
+│   ├── test/
+│   └── truffle-config.js
+│
+├── flask_app/                # Flask backend and routes
+│   ├── app.py
+│   ├── routes.py
+│   ├── config.py
+│   └── blockchain_interface.py
+│
+├── static/                   # CSS, JS, images
+│
+├── templates/                # HTML templates (Flask frontend)
+│   ├── index.html
+│   ├── login.html
+│   ├── admin_dashboard.html
+│   └── result.html
+│
+├── screenshots/              # Project screenshots for README
+│
+├── database/                 # SQL scripts or DB connections
+│   └── schema.sql
+│
+├── requirements.txt          # Python dependencies
+├── README.md                 # Project documentation
+└── LICENSE                   # License file (MIT)
 
-🎯 Key Objectives
-✅ Develop a machine learning-based prediction system for protein classification
+## 📘 **Project Overview**
 
-✅ Secure all predictions using Ethereum blockchain (Truffle + Ganache)
+**Proteomics** is the study of protein structures and functions. It plays a critical role in medical and biological research. However, proteomics data is often **complex, high-volume, and sensitive**, making it difficult to process and secure using traditional methods.
 
-✅ Design a user-friendly Flask-based web interface for researchers
+This project introduces a secure, intelligent system that combines **Machine Learning (ML)** and **Blockchain technology** to:
+- **Classify protein sequences**
+- **Predict protein functions**
+- **Ensure data security and traceability**
+- **Provide a user-friendly web interface for researchers**
 
-✅ Ensure scalability, transparency, and reproducibility in proteomics research
+---
 
-🛠️ Technologies Used
-Layer	Tools
-Frontend	HTML, CSS, Bootstrap, Flask
-Backend	Python, Flask, MySQL
-ML Models	Neural Networks, Random Forest, SVM, Logistic Regression, Decision Tree
-Blockchain	Ganache, Truffle, Ethereum Smart Contracts
-Libraries	Scikit-learn, TensorFlow, Pandas, NumPy
-Dataset	Structural Protein Sequences from RCSB (~467,000+ sequences)
-Feature Extraction	TF-IDF Vectorizer
+## 🎯 **Key Objectives**
 
-🧠 ML Models and Evaluation
-Model	Accuracy (Best)	Precision	Recall
-Neural Network	✅ 93.68%	✅ 93.98%	✅ 93.68%
-Logistic Regression	93.10%	92.90%	93.10%
-Random Forest	29.04%	92.96%	29.04%
-SVM	28.72%	91.17%	28.72%
-Decision Tree	29.09%	92.96%	29.09%
+- ✅ **Classify proteins** using ML algorithms (Neural Networks, SVM, etc.)
+- ✅ **Secure data** using Ethereum Blockchain
+- ✅ **Enable researchers** to upload, analyze, and verify predictions via a web interface
+- ✅ **Support large-scale proteomics research** with accuracy, transparency, and speed
 
-✅ Neural Networks outperformed other models in both Testset 1 and Testset 2.
+---
 
-🔐 Blockchain Integration
-All ML-generated results are stored on a local Ethereum blockchain using:
+## 🛠️ **Technologies Used**
 
-Ganache for simulation
+| **Layer** | **Tools & Technologies** |
+|----------|---------------------------|
+| **Frontend** | HTML, CSS, Bootstrap, Flask |
+| **Backend** | Python, Flask, MySQL |
+| **ML Models** | Neural Network, Random Forest, SVM, Logistic Regression, Decision Tree |
+| **Blockchain** | Ethereum, Ganache, Truffle |
+| **Feature Extraction** | TF-IDF Vectorizer |
+| **Libraries** | Scikit-learn, TensorFlow, Pandas, NumPy |
+| **Dataset** | Structural Protein Sequences (RCSB, 467,000+ records) |
 
-Truffle for smart contract management
+---
 
-SHA-based hashing to ensure integrity
+## 🧠 **ML Models and Evaluation**
 
-This ensures:
+| **Model**             | **Accuracy** | **Precision** | **Recall** |
+|-----------------------|--------------|---------------|------------|
+| **Neural Network**    | ✅ **93.68%** | ✅ **93.98%**  | ✅ **93.68%** |
+| Logistic Regression   | 93.10%       | 92.90%        | 93.10%     |
+| Random Forest         | 29.04%       | 92.96%        | 29.04%     |
+| Support Vector Machine (SVM) | 28.72% | 91.17% | 28.72% |
+| Decision Tree         | 29.09%       | 92.96%        | 29.09%     |
 
-Immutable records of predictions
+✅ **Neural Networks** achieved the highest scores and were selected for final deployment.
 
-Transparent data verification
+---
 
-Prevention of tampering and unauthorized access
+## 🔐 **Blockchain Integration**
 
-🌐 System Architecture
-css
-Copy
-Edit
-[User Input] → [Preprocessing (TF-IDF)] → [ML Prediction] → [Blockchain Logging] → [Flask Web Interface]
-(Replace with your own image)
+Implemented using:
+- **Ganache** for local blockchain simulation
+- **Truffle** for smart contract development
+- **Ethereum** for immutable data storage
 
-🖼️ Screenshots
-🔐 Admin & User Login
+**Key Benefits:**
+- 🔒 **Tamper-proof predictions**
+- 🔍 **Hash-based verification**
+- 📈 **Transparent audit logs**
+
+---
+
+## 🌐 **System Architecture**
+[User Input] ➝ [Preprocessing (TF-IDF)] ➝ [ML Prediction] ➝ [Blockchain Logging] ➝ [Flask UI]
 
 
-📊 Model Training & Prediction Results
+## 🖼️ **Screenshots**
 
+### 🔐 **Login Interfaces**
+### Admin login page
+![image](https://github.com/user-attachments/assets/23773b59-3ab7-424f-b3a4-4ca95f5a76f8)
+### User login page
+![image](https://github.com/user-attachments/assets/73ab8e77-d220-4734-add3-b5aded205408)
+### 📊 **Training & Testing**
+### Training Interface for Classification Model
+![image](https://github.com/user-attachments/assets/ead53183-bce9-41a7-88b8-9cd1c0a01e4d)
+### Testing Interface for Model Evaluation
+![image](https://github.com/user-attachments/assets/1f29c91c-35c9-4327-b56f-179d2f6bad9e)
+### Results
+### Performance metrics of classification models
+![image](https://github.com/user-attachments/assets/02afbae2-69ff-4ecc-8653-53ce232177e1)
+### Bargraph Representation of Performance
+![image](https://github.com/user-attachments/assets/544e04c9-da9e-4c12-86b0-fd2bc278e5b6)
+### Blockchain Page for Proteomics Data Analytics
+![image](https://github.com/user-attachments/assets/2be3f361-090d-4cf0-ab6b-155ea1726709)
 
-🔒 Blockchain Hash Verification
+## 👩‍💻 **Features**
 
-(Replace above with your own local screenshots for authenticity)
+- 📥 Upload `.txt` protein sequence files  
+- 🧠 Choose and train ML models  
+- 📊 View performance metrics (Accuracy, Precision, Recall)  
+- 🔐 Secure prediction results using blockchain  
+- 👥 Role-based login: **Admin** and **User** interfaces
 
-👩‍💻 Features
-Upload protein sequence data (e.g., .txt, .fasta)
+---
 
-Select & train ML model (RF, SVM, NN, etc.)
+## 👨‍🔬 **Team Members**
 
-View performance (Accuracy, Precision, Recall)
+- **Ms. J Siri** – *ML Model Developer*  
+- **Ms. P Lakshmi Manjusha** – *Blockchain & Backend Developer*  
+- **Ms. P Deepika** – *UI/UX & Integration Lead*
 
-Securely log predictions to blockchain
+**Internal Guide:**  
+**Mr. Navakanth Inala**  
+Assistant Professor, Dept. of CSE, **MVSREC**
 
-Role-based login system (Admin & User)
+---
 
-👨‍🔬 Team Members
-Ms. J Siri – ML Model Developer
+## 🚀 **Future Enhancements**
 
-Ms. P Lakshmi Manjusha – Blockchain & Backend Developer
+- 🌐 Deploy to **Ethereum testnet (Goerli/Mainnet)**
+- 🧬 Add deep learning models (CNN/RNN)
+- 📈 Include biological visualizations for researchers
+- 🧠 Improve auto-labeling for protein datasets
 
-Ms. P Deepika – UI/UX & Integration Lead
+---
 
-Internal Guide:
-Mr. Navakanth Inala
-Assistant Professor, Dept. of CSE, MVSREC
+## 📜 **License**
 
-📈 Future Enhancements
-Deploy to live Ethereum testnet (Goerli/Testnet)
-
-Integrate deep learning (CNN/RNN/Transformer)
-
-Add visualization tools for biological interpretation
-
-Expand dataset with real-time protein analysis
-
-📜 License
-This project is licensed under the MIT License.
+This project is licensed under the **MIT License**.
